@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="format-detection" content="telephone=no" /> -->
+    <!-- <meta name="msapplication-tap-highlight" content="no" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>FoodSquare</title>
+    
+    <script type="text/javascript" src="libs/jquery.js"></script>
+    <script type="text/javascript" src="libs/angular.js"></script>
+    <script type="text/javascript" src="libs/angular-route.js"></script>
+    <script type="text/javascript" src="libs/angular-animate.js"></script>
+    <script type="text/javascript" src="libs/angular-aria.js"></script>
+    <script type="text/javascript" src="libs/angular-material.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/angular-material.css" />
+    <link rel="stylesheet" type="text/css" href="css/foodSquare.css" />
+    <script type="text/javascript" src="js/foodSquare.js"></script>
+
+</head>
+<body ng-app="foodSquareApp" ng-controller="mainController">
+    <section layout="row" layout-sm="column" layout-align="center center">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" ng-click="toggleLeft()" aria-label="Settings">
+                    <md-icon md-svg-icon="css/img/ic_menu_36px.svg"></md-icon>
+                </md-button>
+                <h2>
+                    <span> FoodSquare</span>
+                </h2>
+                <span flex=""></span>            
+                <md-button class="md-icon-button" aria-label="Search">
+                    <md-icon md-svg-icon="css/img/ic_search_24px.svg"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+    </section>
+    <section layout="row" layout-sm="column">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+            <md-toolbar class="md-tall md-accent foodsquare-toolbarmenu">
+                <h2 class="md-toolbar-tools">
+                    <span>My account</span>
+                    <md-icon  md-svg-src="css/img/ic_account_circle_48px.svg"></md-icon>
+                </h2>
+            </md-toolbar>
+            <md-content layout-padding>
+                <md-list>
+                  <md-list-item class="" ng-repeat="item in menu.options">
+                    <md-button ng-click="menu.onCloseSideBar()" href="{{item.href}}" aria-label="{{item.what}}">
+                      <md-icon  md-svg-src="{{item.icon}}"></md-icon>
+                      <span>{{item.label}}</span>
+                    </md-button>
+                    
+                  </md-list-item>
+                </md-list>
+            </md-content>
+        </md-sidenav>
+
+        <div ng-view></div>
+
+    </section>    
+</body>
+</html>

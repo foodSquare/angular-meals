@@ -1,0 +1,28 @@
+.foodsquare-toolbarmenu {
+	background-color: rgb(51, 58, 182) !important;
+}
+md-toolbar.md-default-theme {
+	background-color: rgb(255,64,129);
+  	color: rgba(255,255,255,0.87);
+}
+.md-avatar {
+	background: rgb(74, 152, 240);
+}
+md-icon.md-default-theme {
+  color: white;
+}
+.foodsquare-restaurants button {
+  color: white;
+}
+.foodsquare-restaurants img {
+  margin-left: -6px;
+}
+.md-subheader.md-default-theme {
+	color: rgb(255,64,129);
+	font-weight: bold;
+}
+.foodsquare-newchallenge{
+	position: fixed;
+	right: 2em;
+	bottom: 2em;
+}
