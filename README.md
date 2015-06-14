@@ -1,5 +1,4 @@
-# takeFood
-App for take a photo and answer some questions about your feeding. 
+# FoodSquare - Take Photo & Answer questions
 
 #material-design
 #angularJS
@@ -9,3 +8,14 @@ App for take a photo and answer some questions about your feeding.
 #html
 
 
+## Install
+First install all the dependency packages
+
+```shell
+npm install 
+```
+
+You must to have Grunt installed before run the command
+```shell
+grunt build
+```
