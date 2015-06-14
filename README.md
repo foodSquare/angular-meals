@@ -1,2 +1,11 @@
 # takeFood
-App for take a photo and answer some question about food. Languages used to build the app: material-angular, bootstrap and jquery
+App for take a photo and answer some questions about your feeding. 
+
+#material-design
+#angularJS
+#jquery
+#javascript
+#css
+#html
+
+

@@ -3,6 +3,22 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         libsdir: 'bower_components',
+        connect: {
+            options: {
+                port: 8000,
+                hostname: 'localhost',
+                livereload: true//,
+                //keepalive: true
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        './dist/'
+                    ]
+                }
+            }
+        },
         watch: {
             scripts: {
                 files: [
@@ -99,19 +115,28 @@ module.exports = function(grunt) {
         }
   });
 
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+    //grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
   //grunt.registerTask('default', ['concat', 'uglify', 'copy']);
   grunt.registerTask('default', ['concat', 'copy']);
 
-  grunt.registerTask('build', function() {
+  grunt.registerTask('bFiles', function() {
     grunt.task.run([
         'concat',
         'watch'
         ]);
+  });
+  grunt.registerTask('build', function() {
+    grunt.task.run([
+        'concat', 
+        'copy',
+        'connect',
+        'watch'
+    ]);
   });
 
 };

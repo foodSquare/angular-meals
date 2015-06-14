@@ -48,7 +48,7 @@
             <md-content layout-padding>
                 <md-list>
                   <md-list-item class="" ng-repeat="item in menu.options">
-                    <md-button ng-click="menu.onCloseSideBar()" href="{{item.href}}" aria-label="{{item.what}}">
+                    <md-button ng-click="menu.onCloseSideBar(item)" ng-disabled="item.status.toLowerCase()==='disabled'" href="{{item.href}}" aria-label="{{item.label}}">
                       <md-icon  md-svg-src="{{item.icon}}"></md-icon>
                       <span>{{item.label}}</span>
                     </md-button>

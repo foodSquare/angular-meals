@@ -37,5 +37,11 @@
     <!-- <md-icon md-svg-src="css/img/ic_keyboard_alt_24px.svg"></md-icon> -->
     <md-icon md-svg-src="css/img/ic_camera_alt_24px.svg"></md-icon>
 </md-button>
-<input style="display:none;" type="file" capture="camera" accept="image/*" id="photo">
+  
+<input style="display:none;" onchange="angular.element(this).scope().setFiles(this)" type="file" capture="camera" accept="image/*" id="photo">
+<div class="foodsquare-previewimage">
+    <span>Close</span>
+    <img src="" alt="">
+</div>
+
 <!-- <photo control="camera.onClick()"></photo> -->
