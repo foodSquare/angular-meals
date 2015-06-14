@@ -1,11 +1,11 @@
 # FoodSquare - Take Photo & Answer questions
 
-#material-design
-#angularJS
-#jquery
-#javascript
-#css
-#html
+-material-design
+-angularJS
+-jquery
+-javascript
+-css
+-html
 
 
 ## Install
@@ -15,7 +15,7 @@ First install all the dependency packages
 npm install 
 ```
 
-You must to have Grunt installed before run the command
+You must to have [Grunt](http://gruntjs.com/) installed before run the command
 ```shell
 grunt build
 ```
