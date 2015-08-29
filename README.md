@@ -1,4 +1,4 @@
-# FoodSquare - Take Photo & Answer questions
+# FoodSquare - WebApp
 
 The WebApp works with the services of [takeDataFood](https://github.com/foodSquare/takeDataFood) 
 ## [DEMO](http://foodsquare.github.io/angular-meals/)
