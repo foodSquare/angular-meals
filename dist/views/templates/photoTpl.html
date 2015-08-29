@@ -1,0 +1,26 @@
+<md-dialog>
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{photo.title}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="answer('not applicable')">
+        <md-icon md-svg-src="img/icons/ic_close_24px.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div>
+      <img style="margin: auto; max-width: 100%;" src="{{photo.current}}">
+    </div>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <md-button ng-click="save()" class="md-primary">
+     {{photo.saveLabel}}
+    </md-button>
+    <md-button ng-click="retake()" class="md-primary">
+      {{photo.retakeLabel}}
+    </md-button>
+  </div>
+  </form>
+</md-dialog>

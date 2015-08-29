@@ -1,0 +1,47 @@
+<md-content>
+    <md-list>
+   	    <md-subheader class="md-no-sticky">Best restaurants</md-subheader>
+        <md-list-item class="md-3-line" ng-repeat="item in todos">
+            <md-button class="md-fab md-primary foodsquare-restaurants" aria-label="{{item.what}}">
+                <md-icon ng-if="item.type=='icon'" md-svg-src="{{item.face}}"></md-icon>
+                <img ng-if="item.type=='image'" ng-src="{{item.face}}?{{$index}}" alt="{{item.who}}" />
+            </md-button>
+
+            <!-- <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" /> -->
+            <div class="md-list-item-text">
+                <h3>{{ item.who }}</h3>
+                <h4>{{ item.what }}</h4>
+                <p>{{ item.notes }}</p>
+            </div>
+        </md-list-item>
+
+        <md-divider ></md-divider>
+        <md-subheader class="md-no-sticky">Healthy foods</md-subheader>
+        <md-list-item class="md-2-line">
+        	<md-button class="md-fab md-primary foodsquare-restaurants" aria-label="{{todos[0].what}}">
+          	<md-icon ng-if="todos[0].type=='icon'" md-svg-src="{{todos[0].face}}"></md-icon>
+            <img ng-if="todos[0].type=='image'" ng-src="{{todos[0].face}}?{{$index}}" alt="{{todos[0].who}}" />
+        
+        </md-button>
+            <div class="md-list-item-text">
+                <h3>{{ todos[0].who }}</h3>
+                <p>Secondary text</p>
+            </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+    
+    </md-list>
+</md-content>
+
+<md-button class="md-fab foodsquare-newchallenge" ng-click="camera.onClick()" aria-label="New Challenge">
+    <!-- <md-icon md-svg-src="css/img/ic_keyboard_alt_24px.svg"></md-icon> -->
+    <md-icon md-svg-src="css/img/ic_camera_alt_24px.svg"></md-icon>
+</md-button>
+  
+<input style="display:none;" onchange="angular.element(this).scope().setFiles(this)" type="file" capture="camera" accept="image/*" id="photo">
+<div class="foodsquare-previewimage">
+    <span>Close</span>
+    <img src="" alt="">
+</div>
+
+<!-- <photo control="camera.onClick()"></photo> -->

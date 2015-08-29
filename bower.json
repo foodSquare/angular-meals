@@ -1,0 +1,27 @@
+{
+  "name": "lifemoney",
+  "version": "0.0.0",
+  "authors": [
+    "Omar Suca <omarsucap100@gmail.com>"
+  ],
+  "description": "This is an application for control our money in every money transaction",
+  "keywords": [
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "suca.hostzi.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "jquery-2.1.0.min": "http://code.jquery.com/jquery-2.1.0.min.js",
+    "angular-material": "master",
+    "angular-route": "~1.3.15"
+  }
+}
