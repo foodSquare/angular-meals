@@ -386,8 +386,11 @@ footer a:hover {
   width: 286px;
   height: 490px;
   padding-right: 73px;
-  border-radius: 50%;
-} 
+  border-radius: 2px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
 .demo-container {
   /*width: 100%*/
   padding-left: 30%;
